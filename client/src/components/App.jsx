@@ -1,4 +1,5 @@
 import UseLocalStorage from "../hooks/useLocalStorage"
+import Dashboard from "./Dashboard"
 import Login from "./login"
 
 function App() {
@@ -6,8 +7,7 @@ function App() {
 
   return (
     <div>
-      <h1>{id}</h1>
-      <Login handleLogin={setId} />
+      {id ? <Dashboard id={id} /> : <Login handleLogin={setId} />}
     </div>
   )
 }
