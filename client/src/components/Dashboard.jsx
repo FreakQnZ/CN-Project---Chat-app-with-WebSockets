@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Messages } from './Messages'
 import { Contacts } from './Contacts'
 
-const Dashboard = ({id}) => {
+const Dashboard = ({id, setLogin}) => {
 
   const [tab, setTab] = useState("messages")
   const newId = useRef()
@@ -47,7 +47,7 @@ const Dashboard = ({id}) => {
             </ul>
           </div>
           <div className="navbar-end hidden lg:flex">
-            <a className="btn btn-primary">Logout</a>
+            <a onClick={() => setLogin(null)} className="btn btn-primary">Logout</a>
           </div>
         </div>
         {tab === "messages" ? <Messages /> : <Contacts />}

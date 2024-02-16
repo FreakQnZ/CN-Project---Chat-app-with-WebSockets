@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      {id ? <Dashboard id={id} /> : <Login handleLogin={setId} />}
+      {id ? <Dashboard id={id} setLogin={setId} /> : <Login handleLogin={setId} />}
     </div>
   )
 }
