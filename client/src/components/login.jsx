@@ -29,7 +29,8 @@ const Login = ({handleLogin}) => {
         const res = await loginCred.json()
 
         if (loginCred.ok) {
-            handleLogin(res.accessToken)
+            handleLogin([res.accessToken, userIdRef.current.value])
+            // setUserName(userIdRef.current.value)
         }
         else {
             alert(res.message)
