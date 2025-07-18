@@ -5,7 +5,7 @@ import Login from "./login";
 import io from "socket.io-client";
 
 const socket = io.connect(
-  "https://cn-project-chat-app-with-websockets.onrender.com/",
+  "https://cn-project-chat-app-with-websockets.onrender.com",
 );
 
 function App() {

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { v4 as uuid } from "uuid";
 
-const API_HOST = "https://cn-project-chat-app-with-websockets.onrender.com/";
+const API_HOST = "https://cn-project-chat-app-with-websockets.onrender.com";
 
 const Login = ({ handleLogin }) => {
   const userIdRef = useRef();
